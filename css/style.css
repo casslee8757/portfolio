@@ -5,7 +5,7 @@
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
-    --color-pink: #f3918d;
+    --color-pink: #b7b7dd;
     --color-dark-pink: #ff6863;
     --color-black: #000000;
     --color-dark-grey: #4d4d4d;
@@ -46,8 +46,18 @@ a {
 }
 
 ul {
-    list-style: none;
     padding-left: 0;
+}
+
+li {
+    list-style:none;
+}
+
+button {
+    background-color: transparent ;
+    cursor: pointer;
+    border:none;
+    outline:none;
 }
 
 /* typography */
@@ -87,7 +97,7 @@ p{
     background-color: var(--color-pink);
     align-items: center;
     color: var(--color-white);
-    padding: 16px;
+    padding: 4px 16px;
 }
 
 .logo{
@@ -115,4 +125,33 @@ p{
 
 .navbar_menu_item:hover {
     background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+    background: url('/imgs/home-background.png') center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.home_avatar{
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white)
+}
+
+.home_title,
+.home_description{
+    color: var(--color-white)
+}
+
+.home_contact{
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius)
+
 }
