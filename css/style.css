@@ -11,7 +11,7 @@
     --color-black: #000000;
     --color-dark-grey: #4d4d4d;
     --color-pink: #d8a7e2;
-    --color-yellow: #fff7d1;
+    --color-blue: #f4f4fc;
     --color-orange: #feb546;
 
     /* Font size */
@@ -164,6 +164,10 @@ p{
 .section {
     padding: 50px;
     text-align: center;
+    margin: auto;
+}
+
+.section_container{
     max-width: 1200px;
     margin: auto;
 }
@@ -204,4 +208,23 @@ p{
     font-size: var(--font-small);
 }
 
+#about {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/* Skills */
+
+.skill_imgs {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-light-white);
+    padding: 8px;
+    border-radius: 10%;
+    margin: 5px;
+}
+
+#skills {
+    background-color: var(--color-blue);
+}
 
