@@ -5,11 +5,12 @@
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
-    --color-pink: #b7b7dd;
-    --color-dark-pink: #ff6863;
+    --color-light-purple: #b7b7dd;
+    --color-dark-purple: #9a9abd;
+    --color-purple: #7e7ec2;
     --color-black: #000000;
     --color-dark-grey: #4d4d4d;
-    --color-blue: #73aace;
+    --color-pink: #d8a7e2;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
 
@@ -27,6 +28,9 @@
 
     /* size */
     --size-border-radius:4px;
+
+    /* Animation */
+    --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -65,7 +69,7 @@ button {
 h1{
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-black);
+    color: var(--color-purple);
     margin: 16px 0px
 }
 
@@ -94,14 +98,14 @@ p{
 #navbar{
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-pink);
+    background-color: var(--color-light-purple);
     align-items: center;
     color: var(--color-white);
-    padding: 4px 16px;
+    padding: 4px 30px;
 }
 
 .logo{
-    width: 30px;
+    width: 50px;
 }
 
 .navbar_menu{
@@ -124,7 +128,7 @@ p{
 }
 
 .navbar_menu_item:hover {
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-dark-purple);
 }
 
 /* Home */
@@ -155,3 +159,49 @@ p{
     border-radius: var(--size-border-radius)
 
 }
+
+/* section common */
+.section {
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* About */
+
+.about_majors{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+}
+
+.major_icon {
+    width: 170px;
+    height:170px;
+    font-size: 70px;
+    line-height: 170px;
+    margin: auto;
+    color: var(--color-pink);
+    border: 1px solid var(--color-pink);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.major_icon i {
+    transition: all var(--animation-duration) ease;
+}
+.major_icon:hover i{
+    color: var(--color-purple);
+    transform: rotate(-30deg) scale(1.1)
+}
+.major_title,
+.major_description {
+    color: var(--color-dark-grey);
+}
+
+.major_description {
+    font-size: var(--font-small);
+}
+
+
