@@ -113,6 +113,7 @@ p{
 
 .logo{
     width: 50px;
+    cursor: pointer;
 }
 
 .navbar_menu{
@@ -169,10 +170,11 @@ p{
 
 .home_title,
 .home_description{
-    color: var(--color-white)
+    color: var(--color-white);
+    margin-bottom: 30px;
 }
 
-.home_contact{
+.home_link{
     color: var(--color-white);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
@@ -375,6 +377,14 @@ p{
     background-color: var(--color-dark-white);
 }
 
+.project_description span {
+    color: var(--color-white);
+    font-size: var(--font-small)
+}
+
+.project_description a:hover {
+    color: var(--color-light-purple)
+}
 /* Contact */
 
 #contact {
@@ -387,6 +397,10 @@ p{
     color: var(--color-white)
 }
 
+.contact_email {
+    font-size: var(--font-medium);
+    font-weight:var(--weight-bold);
+}
 .contact_title {
     margin: 32px 0;
 }
@@ -396,11 +410,13 @@ p{
     margin: 24px 0;
 }
 
+.contact_email,
 .contact_links i {
-    transition: all var(--animation-duration) ease in;
+    transition: all var(--animation-duration) ease-in;
     
 }
 
+.contact_email:hover,
 .contact_links i:hover {
     transform: scale(1.1);
     color: var(--color-purple);

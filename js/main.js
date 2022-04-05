@@ -35,9 +35,9 @@ navbarToggleBtn.addEventListener('click', () => {
 })
 
 // "contact me" handle click button 
-const contactMe = document.querySelector('.home_contact');
-contactMe.addEventListener('click', (e) => {
-    scrollIntoView('#contact')
+const homeLogo = document.querySelector('.logo');
+homeLogo.addEventListener('click', (e) => {
+    scrollIntoView('#home')
 })
 
 // make home fades slowly as the window scrolls down 
