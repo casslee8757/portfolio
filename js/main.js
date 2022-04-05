@@ -13,6 +13,8 @@ document.addEventListener('scroll', () => {
     }
 })
 
+
+
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar_menu');
 navbarMenu.addEventListener('click', (e) => {
@@ -22,7 +24,14 @@ navbarMenu.addEventListener('click', (e) => {
         return;
     }
    
+    navbarMenu.classList.remove('open')
     scrollIntoView(link);
+})
+
+//Navbar toggle button for responsive page
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 })
 
 // "contact me" handle click button 
@@ -63,6 +72,12 @@ projectBtnContainer.addEventListener('click', (e) => {
     if(filter === null){
         return;
     }
+
+    //remove selection from the previous item and select the new one
+    const active = document.querySelector('.category_btn.selected')
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected')
 
     projectContainer.classList.add('anim_out');
     
