@@ -96,12 +96,19 @@ p{
 
 /* Navbar */
 #navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-light-purple);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 4px 30px;
+    transition: all var(--animation-duration) ease-in-out
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-light-purple);
 }
 
 .logo{
@@ -127,6 +134,11 @@ p{
 
 }
 
+.navbar_menu_item.active {
+    border: 1px solid white;
+    border-radius: var(--size-border-radius)
+}
+
 .navbar_menu_item:hover {
     background-color: var(--color-dark-purple);
 }
@@ -145,6 +157,7 @@ p{
 #home {
     background: url('/imgs/home-background.png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 
 }
