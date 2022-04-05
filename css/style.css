@@ -155,7 +155,7 @@ p{
 
 /* Home */
 #home {
-    background: url('https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/12/18/1387377489565/2a2c376f-bb0d-4907-9d1d-b09653408048-2060x1236.jpeg?width=465&quality=45&auto=format&fit=max&dpr=2&s=b2f49b0f5f956a7140a8c74953a2273e') center/cover no-repeat;
+    background: url('/imgs/home.jpg') center/cover no-repeat;
     padding: 40px;
     padding-top: 120px;
     text-align: center;
