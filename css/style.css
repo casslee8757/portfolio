@@ -185,7 +185,7 @@ p{
 
 }
 
-.home_contact:hover {
+.home_link:hover {
     background-color: var(--color-dark-purple);
 }
 
