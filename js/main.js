@@ -38,6 +38,46 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight
 })
 
+// show 'arrow up' button when scrolling down
+const arrowUp = document.querySelector('.arrow_up')
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight /2){
+        arrowUp.classList.add('visible');
+    }else {
+        arrowUp.classList.remove('visible');
+    }
+})
+
+// 'arrow up' button handle click 
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home')
+})
+
+//Projects
+const projectBtnContainer = document.querySelector('.project_categories');
+const projectContainer = document.querySelector('.work_projects');
+const projects = document.querySelectorAll('.project');
+
+projectBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter === null){
+        return;
+    }
+
+    projectContainer.classList.add('anim_out');
+    
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            }else{
+                project.classList.add('invisible')
+            }
+        })
+        projectContainer.classList.remove('anim_out');
+        
+    }, 300);
+})
 
 // click logic function 
 const scrollIntoView = (selector) => {
