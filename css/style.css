@@ -30,6 +30,23 @@
 
     /* Animation */
     --animation-duration: 300ms;
+    --ti-cursor-color: #9a9abd;
+}
+
+[data-scroll] {
+    opacity: 0;
+    will-change: tranform, scale, opacity;
+    transform: translateY(6rem) scale(0.93);
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-scroll='in'] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+[data-scroll='out'] {
+    opacity: 0;
 }
 
 /* Universal tags */
@@ -448,6 +465,9 @@ p{
     opacity: 1;
     pointer-events: auto;
 }
+
+
+
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {

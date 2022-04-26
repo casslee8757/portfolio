@@ -3,6 +3,19 @@
 const navbar = document.querySelector('#navbar')
 const navbarHeight = navbar.getBoundingClientRect().height;
 
+ScrollOut({
+    onShown: function(el) {
+        // use the web animation API
+        el.animate([{ opacity: 0 }, { opacity: 1 }], 1000);
+      },
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    new TypeIt('.home_title')
+        .pause(1000) 
+        .go()
+})
+
 document.addEventListener('scroll', () => {
    
     if(window.scrollY > navbarHeight){
