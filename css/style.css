@@ -247,8 +247,14 @@ p{
 }
 .major_icon:hover i{
     color: var(--color-purple);
+
     transform: rotate(-30deg) scale(1.1)
 }
+
+.major_icon:hover {
+    border: 1px solid var(--color-purple);
+}
+
 .major_title,
 .major_description {
     color: var(--color-dark-grey);
